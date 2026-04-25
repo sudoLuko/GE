@@ -31,9 +31,9 @@ ENV/
 .AppleDouble
 .LSOverride
 
-# Generated documentation
-ge/*/__pycache__
-ge/SCRIPT.md
+# Generated files
+__pycache__/
+SCRIPT.md
 
 # Logs and temp files
 *.log
