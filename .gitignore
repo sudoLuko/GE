@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.pytype/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.pyproj
+*.pyproject
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Generated documentation
+ge/*/__pycache__
+ge/SCRIPT.md
+learn/PROD_IMPROVEMENTS.md
+learn/SYSTEM.md
+
+# Logs and temp files
+*.log
+tmp/
+temp/
