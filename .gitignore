@@ -34,8 +34,6 @@ ENV/
 # Generated documentation
 ge/*/__pycache__
 ge/SCRIPT.md
-learn/PROD_IMPROVEMENTS.md
-learn/SYSTEM.md
 
 # Logs and temp files
 *.log
