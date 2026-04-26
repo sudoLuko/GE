@@ -2,6 +2,10 @@ import json
 import anthropic
 import psycopg2
 from dotenv import load_dotenv
+from rich.console import Console
+from rich.markdown import Markdown
+
+console = Console()
 
 load_dotenv()
 
@@ -85,7 +89,9 @@ def ask(question: str, cursor, registry: dict, translations: dict) -> str:
 
         tool_results = []
         for call in tool_calls:
-            print(f"  -> calling {call.name}({call.input})")
+            building = call.input.get("building", "")
+            extras = "  ".join(f"{k}={v}" for k, v in call.input.items() if k != "building")
+            console.print(f"  → {call.name:<28}{building}{'  ' + extras if extras else ''}", style="dim")
             result = run_tool(call.name, call.input, cursor, translations)
             tool_results.append({
                 "type": "tool_result",
@@ -130,7 +136,8 @@ def main():
 
         print()
         answer = ask(question, cursor, registry, translations)
-        print(f"\n{answer}\n")
+        console.print(Markdown(answer))
+        print()
 
     cursor.close()
     conn.close()
