@@ -1,9 +1,12 @@
 import json
+import time
 import anthropic
 import psycopg2
 from dotenv import load_dotenv
 from rich.console import Console
 from rich.markdown import Markdown
+
+DEMO_DELAY = 30  # seconds to pause after tool calls — set to 0 when not recording
 
 console = Console()
 
@@ -100,6 +103,9 @@ def ask(question: str, cursor, registry: dict, translations: dict) -> str:
             })
 
         messages.append({"role": "user", "content": tool_results})
+
+        if DEMO_DELAY:
+            time.sleep(DEMO_DELAY)
 
         response = client.messages.create(
             model="claude-opus-4-7",
