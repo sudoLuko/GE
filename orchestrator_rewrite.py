@@ -3,7 +3,7 @@ Improved Orchestrator with all tool functions and updated system prompt.
 
 Added a simple router-then-worker setup. Haiku looks at the incoming query
 and tags it as simple, standard, or complex. From there the right model
-takes over — Haiku for simple lookups, Sonnet for cross-building comparisons,
+takes over with Haiku for simple lookups, Sonnet for cross-building comparisons,
 Opus for full narrative summaries. Keeps Opus reserved for queries that
 actually need it.
 
