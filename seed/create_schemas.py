@@ -1,6 +1,14 @@
 import psycopg2
 from psycopg2 import sql
 
+"""
+Create schemas and tables for data shape.
+
+8 schemas representing 8 buildings in the portfolio numbered 1-8,
+intentional schema drift added to buildings_03 and building_07 to simulate production environment,
+each table has one primary key, the tuples ID, and shares no foreign keys with other tables (this is a demo)
+
+"""
 
 def main():
     conn = psycopg2.connect(

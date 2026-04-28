@@ -21,7 +21,7 @@ SCHEMA = {
 
 
 def get_delinquency(building: str, cursor, translations: dict = None, months_back: int = 1) -> dict:
-    payment_translations = (translations or {}).get(building, {}).get("payments", {})
+    payment_translations = (translations or {}).get(building, {}).get("payments", {})   # filter to dictionary with date and late col
     date_col = payment_translations.get("payment_date", "payment_date")
     late_col = payment_translations.get("late_flag", "late_flag")
 
