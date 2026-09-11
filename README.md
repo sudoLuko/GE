@@ -4,7 +4,7 @@ Local proof-of-concept replicating the query layer of Chris Two, the internal AI
 
 ## Purpose
 
-Built as interview preparation for the Great Expectations engineering team. Demonstrates production-ready patterns for AI agents in financial and affordable housing compliance contexts.
+Built as interview preparation for the Great Expectations engineering team. Explores AI agent patterns for financial and affordable housing workflows using synthetic data. This is a local proof of concept; the production gaps are documented below.
 
 ## Architecture
 
